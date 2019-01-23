@@ -8,5 +8,5 @@ USER jenkins
 
 ### Copy settinfs.xml in jenkins-dir to avoid surefire-plugin error when running maven-tests ###
 
-COPY maven-settings/settings.xml /var/jenkins_home/.m2/settings.xml
+COPY --chown=jenkins:jenkins  maven-settings/settings.xml /var/jenkins_home/.m2/settings.xml
 
