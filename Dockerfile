@@ -1,7 +1,8 @@
 FROM jenkins/jenkins:lts
 
 ### Install Maven 3.0.5 - START ###
-
+USER whoami
+USER root
 RUN wget --no-verbose -O /tmp/apache-maven-3.0.5.tar.gz \
 http://archive.apache.org/dist/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
 # stop building if md5sum does not match
@@ -14,5 +15,6 @@ RUN tar xzf /tmp/apache-maven-3.0.5.tar.gz --strip-components=1 \
 RUN ln -s /opt/maven/bin/mvn /usr/local/bin
 RUN rm -f /tmp/apache-maven-3.0.5.tar.gz
 ENV MAVEN_OPTS -XX:MaxPermSize=450m -Xms600m -Xmx2g
+
 
 ### ###
