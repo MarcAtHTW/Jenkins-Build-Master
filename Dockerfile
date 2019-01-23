@@ -1,7 +1,7 @@
 FROM jenkins/jenkins:lts
 
 ### Install Maven 3.0.5 - START ###
-USER whoami
+RUN whoami
 USER root
 RUN wget --no-verbose -O /tmp/apache-maven-3.0.5.tar.gz \
 http://archive.apache.org/dist/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
