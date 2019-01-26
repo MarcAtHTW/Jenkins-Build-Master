@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts
+FROM msahib/jenkins-build-master:v1
 
 ### Install latest Maven ###
 USER root
@@ -9,4 +9,3 @@ USER jenkins
 ### Copy settinfs.xml in jenkins-dir to avoid surefire-plugin error when running maven-tests ###
 
 COPY --chown=jenkins:jenkins  maven-settings/settings.xml /var/jenkins_home/.m2/settings.xml
-
