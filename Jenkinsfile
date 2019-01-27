@@ -1,4 +1,7 @@
 pipeline {
+    node {
+        checkout scm 
+    }
     agent { label 'Docker' }
         stages {
             stage('Show infos') {
