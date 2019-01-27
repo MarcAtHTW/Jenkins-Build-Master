@@ -1,11 +1,9 @@
 pipeline {
-    node {
-        checkout scm 
-    }
     agent { label 'Docker' }
         stages {
             stage('Show infos') {
                 steps {
+                    checkout scm 
                     bash '''#!/bin/bash
                     ls
                     docker info
