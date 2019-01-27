@@ -26,7 +26,7 @@ pipeline {
                 }
             }
             
-            stage('Show local images') {
+            stage('Show local images before removing') {
                 steps {
                     bash '''#!/bin/bash
                     docker images
@@ -42,7 +42,7 @@ pipeline {
                 }
             }
             
-            stage('Show local images') {
+            stage('Show local images after removing') {
                 steps {
                     bash '''#!/bin/bash
                     docker images
