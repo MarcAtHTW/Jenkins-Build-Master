@@ -4,6 +4,8 @@ FROM msahib/jenkins-build-master:v1
 USER root
 RUN apt-get update && apt-get install -y \
 maven
+RUN apt-get remove mercurial -y
+
 USER jenkins
 
 ### Copy settinfs.xml in jenkins-dir to avoid surefire-plugin error when running maven-tests ###
