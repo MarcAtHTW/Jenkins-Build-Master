@@ -2,10 +2,10 @@ FROM msahib/jenkins-build-master:v1
 
 ### Install latest Maven ###
 USER root
-RUN apt-get update && apt-get install -y \
-maven \
-apt-transport-https \
-vim
+#RUN apt-get update && apt-get install -y \
+#maven \
+#apt-transport-https \
+#vim
 #RUN apt-get purge mercurial -y
 
 USER jenkins
