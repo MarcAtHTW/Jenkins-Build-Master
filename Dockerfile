@@ -4,7 +4,8 @@ FROM msahib/jenkins-build-master:v1
 USER root
 RUN apt-get update && apt-get install -y \
 maven \
-apt-transport-https
+apt-transport-https \
+vim
 #RUN apt-get purge mercurial -y
 
 USER jenkins
