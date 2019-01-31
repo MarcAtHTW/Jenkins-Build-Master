@@ -1,13 +1,14 @@
 FROM msahib/jenkins-build-master:v1
 
-### Install latest Maven ###
 USER root
+
 RUN apt-get update && apt-get install -y \
 maven \
 apt-transport-https \
-vim
+vim \
+mercurial
 
-RUN apt-get remove && apt-get purge mercurial -y
+#RUN apt-get remove && apt-get purge mercurial -y
 
 USER jenkins
 
