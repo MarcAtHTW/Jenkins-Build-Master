@@ -7,7 +7,7 @@ maven \
 apt-transport-https \
 vim
 
-RUN apt-get purge mercurial -y
+RUN apt-get remove && apt-get purge mercurial -y
 
 USER jenkins
 
