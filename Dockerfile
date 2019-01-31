@@ -12,5 +12,5 @@ mercurial
 
 ### Copy settinfs.xml in jenkins-dir to avoid surefire-plugin error when running maven-tests ###
 
-COPY --chown=jenkins:jenkins  maven-settings/settings.xml /var/jenkins_home/.m2/settings.xml
+COPY --chown=jenkins:jenkins  maven-settings/settings.xml /var/jenkins_hom/.m2/settings.xml
 USER jenkins
