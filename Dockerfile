@@ -5,7 +5,7 @@ USER root
 #RUN apt-get update && apt-get install -y \
 #maven \
 #apt-transport-https \
-vim
+#vim
 #mercurial
 
 #RUN apt-get remove && apt-get purge mercurial -y
